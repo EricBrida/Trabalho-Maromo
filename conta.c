@@ -108,12 +108,12 @@ void alterar(p_conta pConta[], int tamanho){
 
                         fflush(stdin);
 
-                        printf("Insira o novo status do cliente, sabendo que\n ESPECIAL(1) NAO ESPECIAL(0)");
+                        printf("Insira o novo status do cliente, sabendo que\n ESPECIAL(1) NAO ESPECIAL(0)\n");
                         scanf("%d", &pConta[i]->especial);
 
                         if(pConta[i]->especial == 0 || pConta[i]->especial == 1)break;
 
-                        printf("Numero invalido, insira novamente");
+                        printf("Numero invalido, insira novamente\n\n");
 
                     }
 
@@ -126,7 +126,7 @@ void alterar(p_conta pConta[], int tamanho){
 
                     system("cls || clear");
 
-                    printf("Opcao invalida, digite novamente...");
+                    printf("Opcao invalida, digite novamente...\n\n");
 
                     break;
 
@@ -142,7 +142,7 @@ void alterar(p_conta pConta[], int tamanho){
 
     if(achou == 0){
 
-        printf("Conta nao encontrada");
+        printf("Conta nao encontrada\n");
 
 
         int resp = 0;
@@ -151,12 +151,12 @@ void alterar(p_conta pConta[], int tamanho){
 
             system("cls || clear");
 
-            printf("Deseja procurar novamente: SIM(1) NAO(0)");
+            printf("Deseja procurar novamente: SIM(1) NAO(0)\n");
             scanf("%d", &resp);
 
             if(resp == 0 || resp == 1) break;
 
-            printf("\n\nDigite 1 ou 0 porfavor");
+            printf("\n\nDigite 1 ou 0 porfavor\n\n");
 
         }
 
@@ -187,7 +187,7 @@ void procurar(p_conta pConta[], int tamanho){
 
         if(proc == pConta[i]->numero){
 
-            printf("Sua conta esta na %d posicao", i);
+            printf("Sua conta esta na %d posicao\n\n", i);
             achou = 1;
             break;
         }
@@ -196,8 +196,9 @@ void procurar(p_conta pConta[], int tamanho){
 
     if(achou == 0){
 
-        printf("Conta nao encontrada");
+        printf("Conta nao encontrada\n");
 
+        system("pause");
 
         int resp = 0;
 
