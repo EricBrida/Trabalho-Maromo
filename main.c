@@ -9,12 +9,10 @@ int main()
 
    p_conta vtrContas[MAX];
 
-   //posição
    int p = 0;
 
    inicializar(vtrContas, MAX);
 
-   // Mostrar menu
     int menu = 0;
 
     while(menu != 9){

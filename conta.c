@@ -36,7 +36,7 @@ void inserir(p_conta pConta[], int posicao){
 
     while(1){
 
-        printf("Cliente especial?? SIM(1) NAO(0): ");
+        printf("Cliente especial?? SIM(1) NAO(0):\n");
         scanf("%i", &pConta[posicao]->especial);
 
         if(pConta[posicao]->especial == 1 || pConta[posicao]->especial == 0)break;
@@ -196,7 +196,9 @@ void procurar(p_conta pConta[], int tamanho){
 
     if(achou == 0){
 
-        printf("Conta nao encontrada\n");
+        system("cls || clear");
+
+        printf("Conta nao encontrada\n\n");
 
         system("pause");
 
@@ -206,12 +208,12 @@ void procurar(p_conta pConta[], int tamanho){
 
             system("cls || clear");
 
-            printf("Deseja procurar novamente: SIM(1) NAO(0)");
+            printf("Deseja procurar novamente: SIM(1) NAO(0)\n");
             scanf("%d", &resp);
 
             if(resp == 0 || resp == 1) break;
 
-            printf("\n\nDigite 1 ou 0 porfavor");
+            printf("\nDigite 1 ou 0 porfavor\n\n");
 
         }
 
@@ -249,7 +251,7 @@ void listar(p_conta pConta[], int tamanho){
 
         }
 
-        printf("Saldo da conta -> %.2lf\n\n\n", pConta[i]->saldo);
+        printf("Saldo da conta -> %.2lf\n\n", pConta[i]->saldo);
 
     }
 
@@ -292,7 +294,7 @@ void depositar(p_conta pConta[], int tamanho){
 
     if(achou == 0){
 
-                printf("Conta nao encontrada");
+                printf("Conta nao encontrada\n");
 
                 system("pause");
 
@@ -302,12 +304,12 @@ void depositar(p_conta pConta[], int tamanho){
 
                     system("cls || clear");
 
-                    printf("Deseja procurar novamente: SIM(1) NAO(0)");
+                    printf("Deseja procurar novamente: SIM(1) NAO(0)\n");
                     scanf("%d", &resp);
 
                     if(resp == 0 || resp == 1) break;
 
-                        printf("\n\nDigite 1 ou 0 porfavor");
+                        printf("Digite 1 ou 0 porfavor\n\n");
 
                     }
 
@@ -353,7 +355,7 @@ void sacar(p_conta pConta[], int tamanho){
 
             }else{
 
-                printf("\nSaldo insuficiente...");
+                printf("\nSaldo insuficiente...\n\n");
 
             }
 
@@ -374,14 +376,14 @@ void sacar(p_conta pConta[], int tamanho){
 
             system("cls || clear");
 
-            printf("Deseja procurar novamente: SIM(1) NAO(0)");
+            printf("Deseja procurar novamente: SIM(1) NAO(0)\n");
             scanf("%d", &resp);
 
             if(resp == 0 || resp == 1) break;
 
                 system("cls || clear");
 
-                printf("\n\nDigite 1 ou 0 porfavor");
+                printf("\n\nDigite 1 ou 0 porfavor\n\n");
 
                 sleep(2);
 
@@ -446,12 +448,12 @@ void imprimir(p_conta pConta[], int tamanho){
 
             system("cls || clear");
 
-            printf("Deseja procurar novamente: SIM(1) NAO(0)");
+            printf("Deseja procurar novamente: SIM(1) NAO(0)\n");
             scanf("%d", &resp);
 
             if(resp == 0 || resp == 1) break;
 
-            printf("\n\nDigite 1 ou 0 porfavor");
+            printf("\n\nDigite 1 ou 0 porfavor\n\n");
 
         }
 
@@ -476,6 +478,6 @@ void saldoGeral(p_conta pConta[], int tamanho){
 
     }
 
-    printf("O saldo de todas as contas somadas e: %.2lf", geral);
+    printf("O saldo de todas as contas somadas e: %.2lf\n\n", geral);
 
 }
